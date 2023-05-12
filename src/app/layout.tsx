@@ -1,7 +1,7 @@
 import "./globals.css";
 import Navigation from "./components/navigation";
 import { createClient } from "@/utils/supabase-server";
-import SupabaseProvider from "./context/supabase-provider";
+import SupabaseProvider from "./components/supabase-provider";
 import SupabaseListener from "./components/supabase-listener";
 
 // キャッシュをしない

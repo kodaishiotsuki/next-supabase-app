@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import useStore from "../../store";
-import { useSupabase } from "../context/supabase-provider";
+import { useSupabase } from "./supabase-provider";
 
 // ユーザーがログインまたはログアウトするたびに新しいセッションを取得する
 const SupabaseListener = ({
