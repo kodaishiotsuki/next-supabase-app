@@ -25,6 +25,7 @@ const BlogNewButton = () => {
     }
   };
 
+  // ログインしているかどうか
   useEffect(() => {
     if (user.id) {
       setLogin(true);

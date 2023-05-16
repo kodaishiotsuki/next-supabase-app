@@ -1,12 +1,18 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { Suspense } from "react";
 import BlogNewButton from "./components/blog/blog-new-button";
+import Loading from "./loading";
+import BlogList from "./components/blog/blog-list";
 
 const HomePage: NextPage = () => {
   return (
     <div className="h-full">
       <BlogNewButton />
-      <div>メインページ</div>
+      {/* 非同期対応 */}
+      <Suspense fallback={<Loading />}>
+        {/* @ts-ignore*/}
+        <BlogList />
+      </Suspense>
     </div>
   );
 };
